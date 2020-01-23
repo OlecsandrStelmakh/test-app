@@ -7,7 +7,7 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-
+  wrongLogInfo = false;
   email;
   password;
 
@@ -18,6 +18,7 @@ export class LogInComponent implements OnInit {
       email: this.email,
       password: this.password,
     })
+    this.wrongLogInfo = true;
   }
   
   ngOnInit() {

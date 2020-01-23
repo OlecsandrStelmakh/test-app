@@ -8,6 +8,7 @@ export class ServiceService implements OnInit{
   userLogined = new EventEmitter<any>();
   viewUserTasks = new EventEmitter<any>();
   emailUsed = new EventEmitter<any>();
+
   tasksData=[];
   users=[];
   tasks = [];
@@ -77,7 +78,7 @@ export class ServiceService implements OnInit{
         email: data[1],
       })
       this.showUserTasks();
-    };
+    }
   }
 
   recordUsers(){
