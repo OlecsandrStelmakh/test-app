@@ -1,0 +1,16 @@
+<div *ngFor='let task of tasks' class="task-container" >
+    <h3>{{task.name}}</h3>
+    <span>{{task.creator}}</span>
+    <textarea>{{task.task}}</textarea>
+    <div *ngIf='task.shared'>
+        <p *ngFor='let users of task.shared' class="task-sheared-info"><i>Shared by {{users.sharedBy}} with: {{users.name}}</i></p>
+    </div>
+    <button (click)='editTask(task)'>Edit task</button>
+    <button (click)='deleteTask(task.id)'>Delete task</button>
+    <button (click)='shareTask(task)'>Share the task</button>
+</div>
+
+<div class="task--noTask" *ngIf='(this.tasks.length < 1)'>There are no tasks for you right now</div>
+
+<app-share-task *ngIf='shareTaskComponent' [shareTaskInfo]="task" (taskWasShared)="wasShared()"></app-share-task>
+<app-edit-task *ngIf='editTaskComponent' [editTaskInfo]="task" (taskWasChanged)="wasChanged()"></app-edit-task>

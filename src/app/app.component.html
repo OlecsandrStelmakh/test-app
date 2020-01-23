@@ -1,0 +1,20 @@
+<header>
+  <div class="container">
+    <div class="register-buttons">
+      <button (click)="letLogOut()" *ngIf="userLogined.logIn">Log Out</button>
+      <button (click)="letLogIn()" *ngIf="!userLogined.logIn">Log In</button>
+      <button (click)="letSignIn()">Sign In</button>
+    </div>
+  </div>
+</header>
+
+<app-sing-in *ngIf="signIn" (closeSingIn)="toogle('signIn')"></app-sing-in> 
+<app-log-in *ngIf="logIn"></app-log-in>
+
+<div class="container" *ngIf="userLogined.logIn">
+    <button (click)="createTask()">Create Task</button>
+    <span class="user-info">{{userLogined.email}}</span>
+    <app-add-task *ngIf="newTask" (taskWasAdded)="toogle('newTask')"></app-add-task>
+    
+    <app-view-tasks></app-view-tasks>
+</div>

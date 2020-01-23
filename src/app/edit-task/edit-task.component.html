@@ -1,0 +1,12 @@
+<div class="editTask-wrapper">
+    <div class="editTask-container">
+        <label>Task name</label>
+        <input type="text" [(ngModel)]="taskName">
+        <label>Task</label>
+        <textarea name="" id="" cols="30" rows="10" [(ngModel)]="taskText"></textarea>
+        <div>
+            <button (click)='save()'>Save</button>
+            <button (click)='colseEditComponent()'>Back</button>
+        </div>
+    </div>
+</div>

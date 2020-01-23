@@ -1,0 +1,33 @@
+.shareTask-wrapper {
+    background-color: rgba(255, 255, 255, 0.411);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.shareTask-container {
+    min-width: 200px;
+    background-color: white;
+    border: solid 1px black;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.shareTask-container select {
+    width: 200px;
+}
+
+.shareTask-container button {
+    box-sizing: border-box;
+    width: 50%;
+}

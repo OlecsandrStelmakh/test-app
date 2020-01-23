@@ -1,0 +1,16 @@
+.register-buttons {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.register-buttons button {
+    padding: 5px;
+    width: 100px;
+}
+
+.user-info {
+    margin-left: 20px;
+}

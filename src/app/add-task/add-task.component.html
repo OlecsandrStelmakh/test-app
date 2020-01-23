@@ -1,0 +1,12 @@
+<div class="addTask-wrapper">
+    <div class="addTask-container">
+        <label>Task name</label>
+        <input type="text" [(ngModel)]="taskName">
+        <label>Task</label>
+        <textarea name="" id="" cols="30" rows="10" [(ngModel)]="taskText"></textarea>
+        <div>
+            <button (click)='addTask()'>Add new task</button>
+            <button (click)='closeAddTaskComponent()'>Close</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.logIn-conteiner {
+    display: flex;
+    flex-flow: column;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.logIn-conteiner input, .logIn-conteiner button {
+    width: 300px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+<div class="singIn-wrapper">
+    <div class="container">
+        <div class="singIn-conteiner">
+            <h2>SING IN</h2>
+            <label for="name">Name</label>
+            <input id="name" type="text"  [(ngModel)]="name">
+            <i *ngIf="userInfo.nameWrong">enter a name</i>
+            <label for="email">Email</label>
+            <input id="email" type="email"  [(ngModel)]="email">
+            <i *ngIf="userInfo.emailExists">user with this email already exists</i>
+            <i *ngIf="userInfo.emailWrong">email must have one @ character</i>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="password"  [(ngModel)]="password">
+            <i *ngIf="userInfo.passwordWrong">password must have more then 8 character</i>
+            <button (click)=singIn()>Sing In</button>
+            <button (click)=closeSingInComponent()>Cancel</button>
+        </div>
+    </div>
+</div>

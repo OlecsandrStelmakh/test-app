@@ -1,0 +1,25 @@
+.task-container {
+    margin: 10px 0;
+    padding: 10px 0;
+    border: solid rgba(194, 194, 194, 0.438);
+    border-width: 0 0 1px 0;
+}
+
+.task-sheared-info {
+    margin: 0;
+}
+
+textarea {
+    margin-top: 5px;
+    height: 150px;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.task--noTask {
+    color: rgb(136, 135, 135);
+    text-align: center;
+    margin: 50px 0;
+}

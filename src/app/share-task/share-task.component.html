@@ -1,0 +1,15 @@
+<div class="shareTask-wrapper">
+    <div class="shareTask-container">
+        <div>
+            <select [(ngModel)]="shareWithUser" class="select-css" *ngIf="users">
+                <!-- <option disabled></option> -->
+                <option *ngFor="let user of users">{{user.email}}</option>
+            </select>
+            <p *ngIf="!users">No users to share</p>
+            <div>
+                <button (click)='share()' *ngIf="users">Confirm</button>
+                <button (click)='closeShareComponent()'>Back</button>
+            </div>
+        </div>
+    </div>
+</div>
